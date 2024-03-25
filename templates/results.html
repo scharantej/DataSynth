@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Results</title>
+</head>
+<body>
+<h1>Results</h1>
+<table>
+<thead>
+<tr>
+{% for column in columns %}
+<th>{{ column }}</th>
+{% endfor %}
+</tr>
+</thead>
+<tbody>
+{% for row in rows %}
+<tr>
+{% for cell in row %}
+<td>{{ cell }}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<a href="/download?data={{ data }}">Download CSV</a>
+</body>
+</html>
+
